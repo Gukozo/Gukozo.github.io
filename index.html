@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+            }
+
+            .links
+            {
+                width: 100%;
+                height: 50px;
+                position: fixed;
+                display: flex;
+            }
+
+            .links label
+            {
+                padding: 10px 0;
+                flex-grow: 1;
+                cursor: pointer;
+                transition: all .4s;
+                text-align: center;
+                font-family: 'Arial';
+                font-size: 100%;
+                color: white;
+            }
+
+            .links label:hover
+            {
+                background-color:rgba(255, 255, 255, .2)
+            }
+
+            .scroll input 
+            {
+                display: none;
+            }
+
+            .bloco 
+            {
+                width: 100vw;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+            .bloco img
+            {
+                width: 40%;
+            } 
+            #a
+            {
+                background-color: tomato;
+            }
+            #b
+            {
+                background-color: royalblue;
+            }
+            #c
+            {
+                background-color: gold;
+            }
+            #d
+            {
+                background-color: plum;
+            }
+            #e
+            {
+                background-color:darkslategray;
+            }
+            
+            .scroll
+            {
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden; 
+            }
+
+            .sections
+            {
+                transition: all .4s;
+            }
+
+            #programacao:checked ~ .sections
+            {
+                margin-top: -100vh;
+            }
+            #interesses:checked ~ .sections
+            {
+                margin-top: -200vh;
+            }
+            #projeto:checked ~ .sections
+            {
+                margin-top: -300vh;
+            }
+            #rede:checked ~ .sections
+            {
+                margin-top: -400vh;
+            }
+
+            .prog-container
+            {
+                display: grid;
+                height: 400px;
+                align-content: center;
+                grid-template-columns: auto auto;
+                grid-gap: 100px;
+                /* background-color: #2196F3; */
+                padding: 10px;
+            }
+
+            .prog-container img 
+            {
+                width: 200px;
+                height: 200px;
+            }
+
+            .rede-container
+            {
+                display: grid;
+                height: 400px;
+                align-content: center;
+                grid-template-columns: auto auto;
+                grid-gap: 100px;
+                /* background-color: #2196F3; */
+                padding: 10px;
+            }
+
+            .rede-container img 
+            {
+                width: 15rem;
+                height: 15rem;
+            }
+/* 
+            .rede-container img.face
+            {
+                width: 17rem;
+                height: 20rem;
+            } */
+        
+        </style>
+    </head>
+    <body>
+        <nav class="links">
+            <label for="Eu">Eu</label>
+            <label for="programacao">Programação</label>
+            <label for="interesses">Meus interesses</label>
+            <label for="projeto">Projeto</label>
+            <label for="rede">Redes Sociais</label>
+        </nav>
+
+        <div class="scroll">    
+            <input type="radio" name="grupo" id="Eu" checked="true"> 
+            <input type="radio" name="grupo" id="programacao">
+            <input type="radio" name="grupo" id="interesses">
+            <input type="radio" name="grupo" id="projeto">
+            <input type="radio" name="grupo" id="rede">
+
+            <section class="sections">
+                <section class="bloco" id="a">
+                    <img src="" alt="">
+                </section>
+
+                <section class="bloco" id="b">
+                    <div class = "prog-container">
+
+                        <img src="/Apple/C++.png" alt="" class="C++">
+                        <img src="/Apple/C.png" alt="" class="C">
+                        <img src="/Apple/python-logo-removebg-preview.png" alt="" class="python">
+                        <img src="/Apple/Web.png" alt="" class="web">
+
+                    </div>
+                </section>
+
+                <section class="bloco" id="c">
+                    <img src="" alt="">
+                </section>
+
+                <section class="bloco" id="d">
+                    <img src="" alt="">
+                </section>
+
+                <section class="bloco" id="e">
+                    <div class="rede-container">
+                        <a href="https://github.com/Gukozo">
+                            <img src="/Apple/got.png" alt="">
+                        </a>
+
+                        <a href="https://twitter.com/GustavoKozonoe">
+                            <img src="/Apple/twitter.png" alt="">
+                        </a>
+
+                        <a href="https://www.instagram.com/gu_kozonoe/">
+                            <img src="/Apple/insta.png" alt="">
+                        </a>
+
+                        <a href="https://www.facebook.com/gustavo.kozonoemaricatorodrigues/">
+                            <img src="/Apple/facebook-3383596_1280.webp" class="face" alt="">
+                        </a>
+                    </div>
+                </section>
+            </section>
+
+        </div>
+    </body>
+</html>
